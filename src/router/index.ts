@@ -3,6 +3,7 @@ import users from './user.router';
 import services from './service.router';
 import bookings from './booking.router';
 import reviews from './review.router';
+import auth from './auth.router';
 
 const router = express.Router();
 
@@ -15,6 +16,7 @@ export default (): express.Router => {
     users(router);
     bookings(router);
     reviews(router);
+    auth(router);
 
     return router;
 }

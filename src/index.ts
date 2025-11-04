@@ -1,11 +1,12 @@
-import express from "express";
 import dotenv from "dotenv";
+dotenv.config();
+
+import express from "express";
 import mongoose from "mongoose";
 import router from "./router/index";
 import bodyParser from "body-parser";
 import compression from "compression";
-
-dotenv.config();
+import cookieParser from "cookie-parser";
 
 const app = express();
 
@@ -13,6 +14,7 @@ mongoose.Promise = Promise;
 
 app.use(bodyParser.json());
 app.use(compression());
+app.use(cookieParser());
 app.use("/", router())
 
 mongoose.connection.on("error", (error: Error) => console.log(error));
@@ -32,3 +34,5 @@ async function startServer() {
 }
 
 startServer();
+
+//res.clearCookie('token'); -> logout
