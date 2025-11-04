@@ -5,7 +5,7 @@ import {
   getBookingsByProviderController,
   deleteBookingController,
   updateBookingStatusController,
-} from "../controllers/bookingController";
+} from "../controllers/booking.controller";
 
 export default (router: express.Router) => {
   router.post("/bookings", createBookingController);

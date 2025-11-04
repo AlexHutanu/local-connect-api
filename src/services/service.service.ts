@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { ServiceModel } from "../models/serviceModel";
+import { ServiceModel } from "../models/service.model";
 
 export const createService = async (serviceData: any) => {
     try {

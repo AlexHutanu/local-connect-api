@@ -1,8 +1,8 @@
 import express from 'express';
-import users from './users';
-import services from './services';
-import bookings from './bookings';
-import reviews from './reviews';
+import users from './user.router';
+import services from './service.router';
+import bookings from './booking.router';
+import reviews from './review.router';
 
 const router = express.Router();
 

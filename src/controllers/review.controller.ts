@@ -5,7 +5,7 @@ import {
     getReviewsByUser,
     deleteReview,
     updateReview
-} from "../services/reviewService";
+} from "../services/review.service";
 import {Request, Response} from "express";
 
 export const createReviewController = async (req: Request, res: Response) => {

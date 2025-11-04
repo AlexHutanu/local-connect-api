@@ -6,7 +6,7 @@ import {
     getServicesByUser,
     updateService,
     deleteService
-} from '../services/serviceService';
+} from '../services/service.service';
 
 export const createServiceController = async (req: Request, res: Response) => {
     const serviceData = req.body;

@@ -5,7 +5,7 @@ import {
   getAllUsersController,
   updateUserController,
   deleteUserController,
-} from "../controllers/userController";
+} from "../controllers/user.controller";
 
 export default (router: express.Router) => {
   router.post("/users", createUserController);

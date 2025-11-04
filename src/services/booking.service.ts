@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { BookingModel } from "../models/bookingModel";
+import { BookingModel } from "../models/booking.model";
 
 export const createBooking = async (bookingData: any) => {
     try {

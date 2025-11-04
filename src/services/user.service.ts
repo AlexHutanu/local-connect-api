@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { UserModel } from "../models/userModel";
+import { UserModel } from "../models/user.model";
 
 export const createUser = async (userData: any) => {
     try {

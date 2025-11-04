@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { ReviewModel } from "../models/reviewModel";
+import { ReviewModel } from "../models/review.model";
 
 export const createReview = async (reviewData: any) => {
     try {

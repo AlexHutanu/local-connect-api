@@ -5,7 +5,7 @@ import {
   getReviewsByUserController,
   deleteReviewController,
   updateReviewController,
-} from "controllers/reviewController";
+} from "../controllers/review.controller";
 
 export default (router: express.Router) => {
   router.post("/reviews", createReviewController);

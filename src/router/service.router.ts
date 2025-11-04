@@ -5,7 +5,7 @@ import {
     getServicesByUserController,
     updateServiceController,
     deleteServiceController,
-} from '../controllers/serviceController';
+} from '../controllers/service.controller';
 
 export default (router: express.Router) => {
     router.post('/services', createServiceController);

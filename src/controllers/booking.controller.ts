@@ -5,7 +5,7 @@ import {
   getBookingsByProvider,
   deleteBooking,
   updateBookingStatus,
-} from "../services/bookingService";
+} from "../services/booking.service";
 import { Request, Response } from "express";
 
 export const createBookingController = async (req: Request, res: Response) => {
