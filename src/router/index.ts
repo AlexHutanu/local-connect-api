@@ -4,6 +4,7 @@ import services from './service.router';
 import bookings from './booking.router';
 import reviews from './review.router';
 import auth from './auth.router';
+import notification from './notification.router';
 
 const router = express.Router();
 
@@ -17,6 +18,7 @@ export default (): express.Router => {
     bookings(router);
     reviews(router);
     auth(router);
+    notification(router);
 
     return router;
 }

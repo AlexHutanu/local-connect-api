@@ -1,10 +1,19 @@
 import { Types } from "mongoose";
 import { BookingModel } from "../models/booking.model";
+import { createNotification } from "./notification.service";
 
 export const createBooking = async (bookingData: any) => {
     try {
         const newBooking = await BookingModel.create(bookingData);
         console.log("Booking created successfully:", newBooking);
+
+        if (bookingData.providerId) {
+            await createNotification(
+                bookingData.providerId.toString(),
+                "New Booking",
+                `You have a new booking from ${bookingData.userId}`
+            );
+        }
         return { 
             status: 201,
             message: "Booking created successfully",
